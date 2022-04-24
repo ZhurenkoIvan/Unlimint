@@ -1,0 +1,16 @@
+org\example\operational_classes\ParserJSON.class
+org\example\threads\ParseThread.class
+org\example\data\Order.class
+org\example\exceptions\WrongLineFormatException.class
+org\example\exceptions\WrongNumbersException.class
+org\example\config\AppConfig.class
+org\example\exceptions\NotAJSONOrWrongJSONFormat.class
+org\example\dto\OrderDTO.class
+org\example\Main.class
+org\example\enums\Currency.class
+org\example\operational_classes\ParserCSV.class
+org\example\threads\ParseThread$1.class
+org\example\enums\FileType.class
+org\example\operational_classes\Converter.class
+org\example\threads\ConvertThread.class
+org\example\operational_classes\Converter$OrderId.class
