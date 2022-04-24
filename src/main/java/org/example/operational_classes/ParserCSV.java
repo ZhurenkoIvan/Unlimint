@@ -10,7 +10,7 @@ public class ParserCSV {
 
     public Order parse(String line) throws WrongLineFormatException {
         String[] fields = line.split(",");
-        if (fields.length > 4) {
+        if (fields.length != 4) {
             throw new WrongLineFormatException();
         }
         Order order = new Order();

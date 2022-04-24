@@ -2,7 +2,7 @@
   <artifact type="jar" name="Unlimint2:jar">
     <output-path>$PROJECT_DIR$/out/artifacts/Unlimint2_jar</output-path>
     <root id="archive" name="Unlimint2.jar">
-      <element id="module-output" name="Unlimint" />
+      <element id="module-output" name="Unlimint2" />
       <element id="extracted-dir" path="$MAVEN_REPOSITORY$/org/springframework/spring-beans/5.3.19/spring-beans-5.3.19.jar" path-in-jar="/" />
       <element id="extracted-dir" path="$MAVEN_REPOSITORY$/org/springframework/spring-aop/5.3.19/spring-aop-5.3.19.jar" path-in-jar="/" />
       <element id="extracted-dir" path="$MAVEN_REPOSITORY$/com/fasterxml/jackson/core/jackson-databind/2.13.2.2/jackson-databind-2.13.2.2.jar" path-in-jar="/" />
