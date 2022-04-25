@@ -21,6 +21,7 @@ public class ParseThread extends Thread {
 
     private final ParserCSV parserCSV;
     private final ParserJSON parserJSON;
+    private AnnotationConfigApplicationContext context;
 
     private String filePath;
     private int lineCount;
@@ -33,7 +34,6 @@ public class ParseThread extends Thread {
 
     @Override
     public void run() {
-        AnnotationConfigApplicationContext context = new AnnotationConfigApplicationContext(AppConfig.class);
         List<String> file;
         try {
             file = Files.readAllLines(Paths.get(filePath));
@@ -71,6 +71,14 @@ public class ParseThread extends Thread {
             convertThread.setPath(filePath);
             convertThread.start();
         }
+    }
+
+    public AnnotationConfigApplicationContext getContext() {
+        return context;
+    }
+
+    public void setContext(AnnotationConfigApplicationContext context) {
+        this.context = context;
     }
 
     private FileType checkFileType(String fileFormat) {

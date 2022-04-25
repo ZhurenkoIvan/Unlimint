@@ -21,6 +21,7 @@ public class Main
         for (String arg : args) {
             ParseThread parseThread = context.getBean("parseThread", ParseThread.class);
             parseThread.setFilePath(currentDirectory + "\\" + arg);
+            parseThread.setContext(context);
             parseThread.start();
         }
     }
