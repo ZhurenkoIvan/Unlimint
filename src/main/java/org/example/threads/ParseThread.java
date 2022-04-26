@@ -1,6 +1,5 @@
 package org.example.threads;
 
-import org.example.config.AppConfig;
 import org.example.data.Order;
 import org.example.enums.FileType;
 import org.example.operational_classes.ParserCSV;
@@ -71,10 +70,6 @@ public class ParseThread extends Thread {
             convertThread.setPath(filePath);
             convertThread.start();
         }
-    }
-
-    public AnnotationConfigApplicationContext getContext() {
-        return context;
     }
 
     public void setContext(AnnotationConfigApplicationContext context) {

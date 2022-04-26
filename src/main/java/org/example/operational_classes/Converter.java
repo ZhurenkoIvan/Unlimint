@@ -38,7 +38,7 @@ public class Converter {
     }
 
     private String getFileName(String path) {
-        Pattern pattern = Pattern.compile("[a-zA-zА-я0-9]+\\.[a-zA-zА-я]+");
+        Pattern pattern = Pattern.compile("[a-zA-ZА-я0-9]+\\.[a-zA-ZА-я]+");
         Matcher matcher = pattern.matcher(path);
         String fileName = path;
         while (matcher.find()) {
