@@ -9,7 +9,6 @@ import org.springframework.context.annotation.AnnotationConfigApplicationContext
 import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Component;
 
-import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.util.List;
@@ -36,11 +35,11 @@ public class ParseThread extends Thread {
         List<String> file;
         try {
             file = Files.readAllLines(Paths.get(filePath));
-        } catch (IOException e) {
+        } catch (Exception e) {
             System.out.println("Файл не найден");
             return;
         }
-        String fileFormat = filePath.substring(filePath.indexOf('.'));
+        String fileFormat = filePath.substring(filePath.lastIndexOf('.'));
         FileType fileType = checkFileType(fileFormat);
         if (fileType == null) {
             System.out.println("Формат " + fileFormat + " файлов не поддерживается. Обратитесь к разработчику");
