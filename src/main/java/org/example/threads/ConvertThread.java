@@ -4,7 +4,7 @@ import org.example.data.Order;
 import org.example.operational_classes.Converter;
 
 
-public class ConvertThread  extends Thread{
+public class ConvertThread extends Thread{
 
     private final Converter converter;
     private String result;
